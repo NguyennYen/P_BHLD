@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46A8A612-6A11-4EA7-8025-8D3640272684}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BHLD.Data</RootNamespace>
+    <AssemblyName>BHLD.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BHLDDBContext.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ErrorResponsitory.cs" />
+    <Compile Include="Repositories\hu_districtRepository.cs" />
+    <Compile Include="Repositories\hu_employeeRepository.cs" />
+    <Compile Include="Repositories\hu_employee_cvRepository.cs" />
+    <Compile Include="Repositories\hu_nationRepository.cs" />
+    <Compile Include="Repositories\hu_organizationRepository.cs" />
+    <Compile Include="Repositories\hu_org_titleRepository.cs" />
+    <Compile Include="Repositories\hu_protectionRepository.cs" />
+    <Compile Include="Repositories\hu_protection_empRepository.cs" />
+    <Compile Include="Repositories\hu_protection_emp_settingRepository.cs" />
+    <Compile Include="Repositories\hu_protection_settingRepository.cs" />
+    <Compile Include="Repositories\hu_protection_sizeRepository.cs" />
+    <Compile Include="Repositories\hu_protection_titleRepository.cs" />
+    <Compile Include="Repositories\hu_protection_title_settingRepository.cs" />
+    <Compile Include="Repositories\hu_provinceRepository.cs" />
+    <Compile Include="Repositories\hu_shoes_settingRepository.cs" />
+    <Compile Include="Repositories\hu_shoes_sizeRepository.cs" />
+    <Compile Include="Repositories\hu_titleRepository.cs" />
+    <Compile Include="Repositories\hu_wardRepository.cs" />
+    <Compile Include="Repositories\ot_other_listRepository.cs" />
+    <Compile Include="Repositories\ot_other_list_typeRepository.cs" />
+    <Compile Include="Repositories\se_functionRepository.cs" />
+    <Compile Include="Repositories\se_function_groupRepository.cs" />
+    <Compile Include="Repositories\se_reportRepository.cs" />
+    <Compile Include="Repositories\se_userRepository.cs" />
+    <Compile Include="Repositories\se_user_org_accessRepository.cs" />
+    <Compile Include="Repositories\se_user_permissionRepository.cs" />
+    <Compile Include="Repositories\se_user_reportRepository.cs" />
+    <Compile Include="Repositories\syntheticRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BHLD.Common\BHLD.Common.csproj">
+      <Project>{c4e5ae25-84dd-401a-b0d8-6c0e840cb4df}</Project>
+      <Name>BHLD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BHLD.Model\BHLD.Model.csproj">
+      <Project>{fcaee0c6-8e66-450c-8251-9c0ebe6be0cb}</Project>
+      <Name>BHLD.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
