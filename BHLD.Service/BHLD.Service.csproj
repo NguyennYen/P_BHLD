@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationGroupService.cs" />
     <Compile Include="ErrorMessage.cs" />
     <Compile Include="hu_districtServices.cs" />
     <Compile Include="hu_employeeServices.cs" />

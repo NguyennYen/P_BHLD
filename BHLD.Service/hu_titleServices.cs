@@ -11,7 +11,7 @@ namespace BHLD.Services
 {
     public interface Ihu_titleServices
     {
-        void Add(hu_title post);
+        hu_title Add(hu_title post);
         void Update(hu_title post);
         void Delete(int id);
         IEnumerable<hu_title> GetAll();
@@ -25,11 +25,17 @@ namespace BHLD.Services
 
     public class hu_titleServices : Ihu_titleServices
     {
-        hu_titleRepository _hu_titleRepository;
-        IUnitOfWork _unitOfWork;
-        public void Add(hu_title post)
+        private Ihu_titleRepository _hu_titleRepository;
+        private IUnitOfWork _unitOfWork;
+        public hu_titleServices(Ihu_titleRepository hu_titleRepository, IUnitOfWork unitOfWork)
         {
-            _hu_titleRepository.Add(post);
+            this._hu_titleRepository = hu_titleRepository;
+            this._unitOfWork = unitOfWork;
+        }
+      
+        public hu_title Add(hu_title post)
+        {
+            return _hu_titleRepository.Add(post);
         }
 
         public void Delete(int id)

@@ -1,4 +1,5 @@
 ﻿using BHLD.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BHLD.Data
 {
-    public class BHLDDbContext : DbContext
+    public class BHLDDbContext : IdentityDbContext<ApplicationUser>
     {
         public BHLDDbContext() : base("BHLDConnection")
         {
@@ -48,9 +49,20 @@ namespace BHLD.Data
         public DbSet<se_user_permission> se_User_Permissions { set; get; }
         public DbSet<se_user_report> se_User_Reports { set; get; }
         public DbSet<Error> errors { set; get; }
+        public DbSet<ApplicationGroup> ApplicationGroups { set; get; }
+        public DbSet<ApplicationUserGroup> ApplicationUserGroups { set; get; }
+        public static BHLDDbContext Create()
+        {
+            return new BHLDDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+            modelBuilder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            modelBuilder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");
         }
     }
 }
