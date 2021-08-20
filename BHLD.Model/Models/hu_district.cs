@@ -33,6 +33,9 @@ namespace BHLD.Model.Models
         [StringLength(1023)]
         public string remark { get; set; }
 
+        [StringLength(1)]
+        public string actfg { get; set; }
+
         public virtual IEnumerable<hu_ward> hu_wards { get; set; }
 
     }

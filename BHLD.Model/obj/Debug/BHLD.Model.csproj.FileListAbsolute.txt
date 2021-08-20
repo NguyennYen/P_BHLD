@@ -10,3 +10,15 @@ C:\Users\admin\Desktop\Project\BHLD\BHLD.Model\obj\Debug\BHLD.Model.csproj.CoreC
 C:\Users\admin\Desktop\Project\BHLD\BHLD.Model\obj\Debug\BHLD.Model.csproj.CopyComplete
 C:\Users\admin\Desktop\Project\BHLD\BHLD.Model\obj\Debug\BHLD.Model.dll
 C:\Users\admin\Desktop\Project\BHLD\BHLD.Model\obj\Debug\BHLD.Model.pdb
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\BHLD.Model.dll.config
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\BHLD.Model.dll
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\BHLD.Model.pdb
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.dll
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.xml
+D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.AssemblyReference.cache
+D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.CoreCompileInputs.cache
+D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.CopyComplete
+D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.dll
+D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.pdb
