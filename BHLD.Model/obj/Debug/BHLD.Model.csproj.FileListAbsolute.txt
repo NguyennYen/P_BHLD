@@ -17,7 +17,6 @@ D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.dll
 D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.xml
 D:\CongViec\VMO4\BHLD.Model\bin\Debug\EntityFramework.SqlServer.xml
-D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.AssemblyReference.cache
 D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.CoreCompileInputs.cache
 D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.csproj.CopyComplete
 D:\CongViec\VMO4\BHLD.Model\obj\Debug\BHLD.Model.dll
